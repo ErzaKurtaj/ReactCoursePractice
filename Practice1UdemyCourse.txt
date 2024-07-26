@@ -1,0 +1,130 @@
+import React, { useState, useEffect } from 'react';
+
+function App() {
+  const [hobbies, setHobbies] = useState(["Sports", "Working"]);
+
+  useEffect(() => {
+    const updatedHobbies = ["Sports"]; 
+    updatedHobbies.push("Coding"); 
+    setHobbies(updatedHobbies); 
+  }, []);
+
+  return (
+    <div>
+      <h1>My Hobbies</h1>
+      <ul>
+        {hobbies.map((hobby, index) => (
+          <li key={index}>{hobby}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+  // State to store the input password
+//   const [password, setPassword] = useState('');
+//   const [message, setMessage] = useState('');
+
+//   const handlePasswordCheck = () => {
+//     if (password === 'Hello') {
+//       setMessage('Hello works');
+//     } else if (password === 'hello') {
+//       setMessage('hello works');
+//     } else {
+//       setMessage('Access not granted.');
+//     }
+//   };
+
+//   const hobbies=["Sports", "Cooking"];
+
+//   for(const hobby of hobbies) {
+//     console.log(hobby);
+//   }
+
+//   return (
+//     <div>
+//       <input
+//         type="text"
+//         placeholder="Enter your password"
+//         value={password}
+//         onChange={(e) => setPassword(e.target.value)}
+//       />
+//       <button onClick={handlePasswordCheck}>Check Password</button>
+//       <p>{message}</p>
+//       <h2>My Hobbies</h2>
+//       <ul>
+//         {hobbies.map((hobby, index) => (
+//           <li key={index}>{hobby}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+//const list = document.querySelector("ul");
+// list.remove();
+
+  // const hobbies = ["Sports", "Cooking"];
+  // const user = {
+  //   name: "Max",
+  //   age: 34
+  // };
+
+  // const newHobbies = ["Reading"]; 
+
+  // const mergedHobbies = [...hobbies, ...newHobbies]; 
+
+  // console.log(mergedHobbies); // This will log ["Sports", "Cooking", "Reading"]
+
+  // const extendedUser={
+  //   isAdmin:true,
+  //   ...user
+  // }
+  // console.log(extendedUser);
+
+  // return (
+  //   <div>
+  //     <h1>Welcome, {user.name}!</h1>
+  //     <p>Age: {user.age}</p>
+  //     <p>Is Admin: {extendedUser.isAdmin? "True": "False"}</p>
+  //     <h2>Hobbies:</h2>
+  //     <ul>
+  //       {mergedHobbies.map((hobby, index) => (
+  //         <li key={index}>{hobby}</li>
+  //       ))}
+  //     </ul>
+  //   </div>
+  // );
+
+
+
+// function handleTimeout(){
+//   console.log("Timed out!");
+// };
+
+// setTimeout(handleTimeout,2000);
+// setTimeout(handleTimeout2);
+// setTimeout(()=>{
+//   console.log('More timing out...');
+// }, 4000);
+
+
+//   const { name, age } = {
+//     name: "Erza",
+//     age: 21,
+//   };
+
+//   return (
+//     <div>
+//       <h1>Name: {name}</h1>
+//       <h1>Age: {age}</h1>
+//     </div>
+//   );
